@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "bungus.sunlesssea.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "sunlesssea.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
