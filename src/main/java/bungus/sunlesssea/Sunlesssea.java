@@ -1,6 +1,14 @@
 package bungus.sunlesssea;
 
+import bungus.sunlesssea.block.ModBlocks;
+import bungus.sunlesssea.entity.ModDataSerializers;
+import bungus.sunlesssea.entity.ModEntities;
+import bungus.sunlesssea.entity.client.StitcherEelRenderer;
+import bungus.sunlesssea.item.ModCreativeModeTabs;
+import bungus.sunlesssea.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,8 +26,15 @@ import org.slf4j.Logger;
 public class Sunlesssea {
     public static final String MOD_ID = "sunlesssea";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public Sunlesssea() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public Sunlesssea(FMLJavaModLoadingContext context) {
+        IEventBus modEventBus = context.getModEventBus();
+        
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModDataSerializers.register(modEventBus);
+        
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -40,6 +55,7 @@ public class Sunlesssea {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.STITCHER_EEL.get(), StitcherEelRenderer::new);
         }
     }
 }
