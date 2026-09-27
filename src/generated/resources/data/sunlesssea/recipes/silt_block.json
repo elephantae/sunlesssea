@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "sunlesssea:silt"
+    }
+  },
+  "pattern": [
+    "XX ",
+    "XX ",
+    "   "
+  ],
+  "result": {
+    "item": "sunlesssea:silt_block"
+  },
+  "show_notification": true
+}

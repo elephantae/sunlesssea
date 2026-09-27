@@ -1,0 +1,11 @@
+{
+  "type": "sunlesssea:sunlessdim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:ocean"
+    },
+    "settings": "minecraft:amplified"
+  }
+}
