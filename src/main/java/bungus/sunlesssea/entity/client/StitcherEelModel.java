@@ -2,7 +2,6 @@ package bungus.sunlesssea.entity.client;
 
 import bungus.sunlesssea.Sunlesssea;
 import bungus.sunlesssea.entity.custom.StitcherEelEntity;
-import bungus.sunlesssea.entity.custom.WormEntity;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;

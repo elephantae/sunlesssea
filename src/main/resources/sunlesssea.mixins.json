@@ -2,10 +2,9 @@
   "required": true,
   "minVersion": "0.8",
   "package": "bungus.sunlesssea.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "refmap": "sunlesssea.refmap.json",
   "mixins": [
-    "ServerGamePacketListenerImplMixin",
     "MultiPlayerGameModeMixin"
   ],
   "client": [

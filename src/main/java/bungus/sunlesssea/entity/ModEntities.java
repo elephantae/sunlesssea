@@ -21,6 +21,6 @@ public class ModEntities {
     public static final RegistryObject<EntityType<StitcherEelEntity>> STITCHER_EEL =
             ENTITY_TYPES.register("stitchereel",
                     () -> EntityType.Builder.of(StitcherEelEntity::new, MobCategory.WATER_CREATURE)
-                            .sized(1,1)
+                            .sized(0.8f,0.8f)
                             .build(ResourceLocation.fromNamespaceAndPath(Sunlesssea.MOD_ID,"stitchereel").toString()));
 }
